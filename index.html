@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Tradicional - Historia y Evolución</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Programación Tradicional</h1>
+            <p class="header-subtitle">Un viaje a través de la historia de la programación</p>
+        </div>
+    </header>
+
+    <nav class="tabs">
+        <div class="container">
+            <input type="radio" id="tab1" name="tabs" checked>
+            <input type="radio" id="tab2" name="tabs">
+            <input type="radio" id="tab3" name="tabs">
+            <input type="radio" id="tab4" name="tabs">
+            <input type="radio" id="tab5" name="tabs">
+
+            <div class="tab-labels">
+                <label for="tab1" class="tab-label">General</label>
+                <label for="tab2" class="tab-label">Pac-Man</label>
+                <label for="tab3" class="tab-label">Doom</label>
+                <label for="tab4" class="tab-label">Lenguajes</label>
+                <label for="tab5" class="tab-label">Ejemplos</label>
+            </div>
+
+            <div class="tab-contents">
+                <!-- TAB 1: GENERAL -->
+                <div class="tab-content">
+                    <div class="hero-section">
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Computadora vintage" class="hero-image">
+                        <div class="hero-text">
+                            <h2>¿Qué es la Programación Tradicional?</h2>
+                            <p>La programación tradicional se refiere a los métodos y paradigmas de desarrollo de software que dominaron la industria desde los años 1940 hasta los 1980s.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="card">
+                            <h3>Características Principales</h3>
+                            <ul>
+                                <li><strong>Programación Secuencial:</strong> Código ejecutado línea por línea</li>
+                                <li><strong>Memoria Limitada:</strong> Optimización extrema de recursos</li>
+                                <li><strong>Bajo Nivel:</strong> Control directo del hardware</li>
+                                <li><strong>Compilación Directa:</strong> Traducción directa a código máquina</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>Paradigmas Dominantes</h3>
+                            <ul>
+                                <li><strong>Programación Imperativa:</strong> Instrucciones paso a paso</li>
+                                <li><strong>Programación Estructurada:</strong> Uso de funciones y procedimientos</li>
+                                <li><strong>Programación Modular:</strong> División en módulos independientes</li>
+                                <li><strong>Batch Processing:</strong> Procesamiento por lotes</li>
+                            </ul>
+                        </div>
+
+                        <div class="card full-width">
+                            <h3>Evolución Histórica</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-year">1940s</div>
+                                    <div class="timeline-content">Primeros ordenadores - Programación en código máquina</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">1950s</div>
+                                    <div class="timeline-content">Lenguaje ensamblador - FORTRAN (1957)</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">1960s</div>
+                                    <div class="timeline-content">COBOL, ALGOL - Programación estructurada</div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-year">1970s</div>
+                                    <div class="timeline-content">Pascal, C - Programación modular</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: PAC-MAN -->
+                <div class="tab-content">
+                    <div class="hero-section">
+                        <img src="https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Arcade gaming" class="hero-image">
+                        <div class="hero-text">
+                            <h2>Pac-Man (1980) - Un Clásico de la Programación</h2>
+                            <p>Descubre cómo la programación tradicional dio vida a uno de los juegos más icónicos de la historia.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="card">
+                            <h3>Especificaciones Técnicas</h3>
+                            <ul>
+                                <li><strong>CPU:</strong> Zilog Z80 (3.072 MHz)</li>
+                                <li><strong>RAM:</strong> 2KB para programa, 2KB para video</li>
+                                <li><strong>Lenguaje:</strong> Ensamblador Z80</li>
+                                <li><strong>Pantalla:</strong> 224×288 píxeles</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>Algoritmos Clave</h3>
+                            <ul>
+                                <li><strong>Pathfinding:</strong> Algoritmo simple de persecución</li>
+                                <li><strong>Estado de Fantasmas:</strong> Máquina de estados finitos</li>
+                                <li><strong>Colisiones:</strong> Detección basada en tiles</li>
+                                <li><strong>Animación:</strong> Sprites intercambiados por frame</li>
+                            </ul>
+                        </div>
+
+                        <div class="code-example">
+                            <h3>Ejemplo de Código (Pseudocódigo en estilo Z80)</h3>
+                            <pre><code>; Movimiento básico de Pac-Man
+MOVE_PACMAN:
+    LD A, (INPUT_PORT)    ; Leer entrada del joystick
+    CP MOVE_UP           ; ¿Movimiento hacia arriba?
+    JR Z, MOVE_UP_PROC   ; Si es así, saltar a rutina
+    CP MOVE_DOWN         ; ¿Movimiento hacia abajo?
+    JR Z, MOVE_DOWN_PROC ; Si es así, saltar a rutina
+    ; ... continúa para todas las direcciones
+    RET
+
+; Detección de colisión con fantasma
+CHECK_GHOST_COLLISION:
+    LD HL, PACMAN_X      ; Cargar posición X de Pac-Man
+    LD DE, GHOST_X       ; Cargar posición X del fantasma
+    OR A                 ; Limpiar carry flag
+    SBC HL, DE           ; Restar posiciones
+    JR Z, COLLISION      ; Si son iguales, hay colisión
+    RET</code></pre>
+                        </div>
+
+                        <div class="card full-width">
+                            <h3>Innovaciones Técnicas</h3>
+                            <p><strong>IA de Fantasmas:</strong> Cada fantasma tenía una personalidad única programada con diferentes algoritmos de persecución. Blinky perseguía directamente, Pinky anticipaba movimientos, Inky era impredecible, y Clyde alternaba entre perseguir y huir.</p>
+                            <p><strong>Optimización de Memoria:</strong> Con solo 4KB de RAM, cada byte era crucial. Los sprites se almacenaban de forma comprimida y se utilizaban técnicas como la reutilización de patrones de tiles.</p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="tab-content">
+                    <div class="hero-section">
+                        <img src="https://images.pexels.com/photos/9072316/pexels-photo-9072316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Gaming setup" class="hero-image">
+                        <div class="hero-text">
+                            <h2>Doom (1993) - Revolución en 3D</h2>
+                            <p>Cómo la programación tradicional optimizada logró crear el primer shooter 3D exitoso en PCs limitados.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="card">
+                            <h3>Especificaciones Mínimas</h3>
+                            <ul>
+                                <li><strong>CPU:</strong> 386DX (25 MHz)</li>
+                                <li><strong>RAM:</strong> 4MB</li>
+                                <li><strong>Lenguaje:</strong> C y Ensamblador</li>
+                                <li><strong>Gráficos:</strong> VGA 320×200</li>
+                            </ul>
+                        </div>
+
+                        <div class="card">
+                            <h3>Técnicas Avanzadas</h3>
+                            <ul>
+                                <li><strong>BSP Trees:</strong> Renderizado eficiente de niveles</li>
+                                <li><strong>Raycasting:</strong> Simulación 3D en 2D</li>
+                                <li><strong>Visplanes:</strong> Optimización de superficies</li>
+                                <li><strong>Sector-based:</strong> Arquitectura modular de niveles</li>
+                            </ul>
+                        </div>
+
+                        <div class="code-example">
+                            <h3>Ejemplo de Algoritmo BSP (Pseudocódigo)</h3>
+                            <pre><code>// Algoritmo BSP para renderizado eficiente
+void RenderBSPNode(bspnode_t *node, player_t *player)
+{
+    if (!node) return;
+    
+    // Determinar en qué lado del nodo está el jugador
+    int side = PointOnSide(player->x, player->y, node->line);
+    
+    // Renderizar primero el lado lejano (back-to-front)
+    RenderBSPNode(node->children[!side], player);
+    
+    // Renderizar la línea divisoria si es visible
+    if (LineIsVisible(node->line, player))
+    {
+        RenderWall(node->line);
+    }
+    
+    // Renderizar el lado cercano
+    RenderBSPNode(node->children[side], player);
+}
+
+// Optimización de memoria para sprites
+void DrawSprite(sprite_t *sprite)
+{
+    // Usar lookup tables para cálculos trigonométricos
+    int distance = sintable[angle] * sprite->x + costable[angle] * sprite->y;
+    int scale = FixedDiv(PROJECTION, distance);
+    
+    // Dibujar solo los pixels visibles
+    DrawScaledColumn(sprite->patch, scale);
+}</code></pre>
+                        </div>
+
+                        <div class="card full-width">
+                            <h3>Innovaciones Revolucionarias</h3>
+                            <p><strong>Motor BSP:</strong> John Carmack desarrolló un sistema de Binary Space Partitioning que permitía renderizar niveles complejos de forma eficiente, dividiendo el espacio en secciones para optimizar el dibujado.</p>
+                            <p><strong>Networking Multiplayer:</strong> Doom fue pionero en juegos multijugador por red, utilizando un protocolo UDP optimizado que sincronizaba solo los comandos de los jugadores, no todo el estado del juego.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: LENGUAJES -->
+                <div class="tab-content">
+                    <div class="hero-section">
+                        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Programming languages" class="hero-image">
+                        <div class="hero-text">
+                            <h2>Lenguajes de Programación Tradicionales</h2>
+                            <p>Los pioneros que sentaron las bases de la programación moderna.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="language-card">
+                            <div class="language-header">
+                                <h3>FORTRAN (1957)</h3>
+                                <span class="language-year">Formula Translation</span>
+                            </div>
+                            <p><strong>Creador:</strong> IBM - John Backus</p>
+                            <p><strong>Propósito:</strong> Cálculos científicos y matemáticos</p>
+                            <div class="code-sample">
+                                <h4>Ejemplo - Cálculo de Factorial:</h4>
+                                <pre><code>      PROGRAM FACTORIAL
+      INTEGER N, FACT, I
+      WRITE(*,*) 'ENTER A NUMBER:'
+      READ(*,*) N
+      FACT = 1
+      DO 10 I = 1, N
+         FACT = FACT * I
+   10 CONTINUE
+      WRITE(*,*) 'FACTORIAL IS:', FACT
+      END</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="language-card">
+                            <div class="language-header">
+                                <h3>COBOL (1959)</h3>
+                                <span class="language-year">Common Business-Oriented Language</span>
+                            </div>
+                            <p><strong>Creador:</strong> Grace Hopper y equipo</p>
+                            <p><strong>Propósito:</strong> Aplicaciones comerciales y de negocios</p>
+                            <div class="code-sample">
+                                <h4>Ejemplo - Proceso de Nómina:</h4>
+                                <pre><code>IDENTIFICATION DIVISION.
+PROGRAM-ID. PAYROLL.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 EMPLOYEE-RECORD.
+   05 EMP-NAME        PIC X(30).
+   05 HOURS-WORKED    PIC 9(2).
+   05 HOURLY-RATE     PIC 9(2)V99.
+   05 GROSS-PAY       PIC 9(4)V99.
+PROCEDURE DIVISION.
+COMPUTE GROSS-PAY = HOURS-WORKED * HOURLY-RATE.
+DISPLAY "GROSS PAY: " GROSS-PAY.</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="language-card">
+                            <div class="language-header">
+                                <h3>Pascal (1970)</h3>
+                                <span class="language-year">Programación Estructurada</span>
+                            </div>
+                            <p><strong>Creador:</strong> Niklaus Wirth</p>
+                            <p><strong>Propósito:</strong> Enseñanza y programación estructurada</p>
+                            <div class="code-sample">
+                                <h4>Ejemplo - Ordenamiento Burbuja:</h4>
+                                <pre><code>program BubbleSort;
+var
+  arr: array[1..10] of integer;
+  i, j, temp, n: integer;
+begin
+  n := 10;
+  { Leer números }
+  for i := 1 to n do
+    read(arr[i]);
+  
+  { Algoritmo burbuja }
+  for i := 1 to n-1 do
+    for j := 1 to n-i do
+      if arr[j] > arr[j+1] then
+      begin
+        temp := arr[j];
+        arr[j] := arr[j+1];
+        arr[j+1] := temp;
+      end;
+end.</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="language-card">
+                            <div class="language-header">
+                                <h3>C (1972)</h3>
+                                <span class="language-year">System Programming</span>
+                            </div>
+                            <p><strong>Creador:</strong> Dennis Ritchie - Bell Labs</p>
+                            <p><strong>Propósito:</strong> Programación de sistemas y SO</p>
+                            <div class="code-sample">
+                                <h4>Ejemplo - Lista Enlazada:</h4>
+                                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+void insertNode(struct Node** head, int data) {
+    struct Node* newNode = malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = *head;
+    *head = newNode;
+}
+
+int main() {
+    struct Node* head = NULL;
+    insertNode(&head, 10);
+    insertNode(&head, 20);
+    return 0;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: EJEMPLOS -->
+                <div class="tab-content">
+                    <div class="hero-section">
+                        <img src="classic-game-control-free-vector.jpg" alt="Gaming history" class="hero-image">
+                        <div class="hero-text">
+                            <h2>Más Ejemplos Clásicos</h2>
+                            <p>Otros juegos y aplicaciones que marcaron la historia de la programación.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="example-card">
+                            <h3>Space Invaders (1978)</h3>
+                            <p><strong>Hardware:</strong> Intel 8080 (2 MHz)</p>
+                            <p><strong>Memoria:</strong> 8KB ROM, 1KB RAM</p>
+                            <p><strong>Innovación:</strong> Primer juego en usar dificultad progresiva. La velocidad aumentaba automáticamente al destruir enemigos debido a que había menos sprites que procesar.</p>
+                            <div class="tech-detail">
+                                <strong>Truco Técnico:</strong> El aumento de velocidad era un "bug" convertido en feature - menos enemigos = menos cálculos = más velocidad.
+                            </div>
+                        </div>
+
+                        <div class="example-card">
+                            <h3>Tetris (1984)</h3>
+                            <p><strong>Plataforma:</strong> Electronika 60 (PDP-11 compatible)</p>
+                            <p><strong>Lenguaje:</strong> Pascal</p>
+                            <p><strong>Innovación:</strong> Algoritmo de rotación de piezas y detección de líneas completas con matrices bidimensionales simples pero eficientes.</p>
+                            <div class="tech-detail">
+                                <strong>Algoritmo Clave:</strong> Detección de líneas completas mediante barrido de filas y compactación de matriz.
+                            </div>
+                        </div>
+
+                        <div class="example-card">
+                            <h3>Pong (1972)</h3>
+                            <p><strong>Hardware:</strong> TTL (Transistor-Transistor Logic) puro</p>
+                            <p><strong>Procesador:</strong> ¡Ninguno! Solo circuitos lógicos</p>
+                            <p><strong>Innovación:</strong> Primer videojuego comercial exitoso. La lógica del juego estaba completamente implementada en hardware, sin software.</p>
+                            <div class="tech-detail">
+                                <strong>Curiosidad:</strong> No había CPU ni programa - todo era circuitería analógica y digital pura.
+                            </div>
+                        </div>
+
+                        <div class="example-card">
+                            <h3>Prince of Persia (1989)</h3>
+                            <p><strong>Plataforma:</strong> Apple II (1 MHz)</p>
+                            <p><strong>Memoria:</strong> 64KB</p>
+                            <p><strong>Innovación:</strong> Animación rotoscópica - animaciones realizadas filmando movimientos reales y digitalizándolos frame por frame.</p>
+                            <div class="tech-detail">
+                                <strong>Técnica:</strong> Jordan Mechner filmó a su hermano corriendo y saltando, luego digitalizó cada frame manualmente.
+                            </div>
+                        </div>
+
+                        <div class="example-card">
+                            <h3>SimCity (1989)</h3>
+                            <p><strong>Lenguaje:</strong> C y Ensamblador</p>
+                            <p><strong>Innovación:</strong> Primer simulador complejo de ciudad con sistemas interconectados (electricidad, agua, tráfico, crimen).</p>
+                            <div class="tech-detail">
+                                <strong>Algoritmo:</strong> Autómatas celulares para simular la propagación de problemas urbanos como el crimen y la contaminación.
+                            </div>
+                        </div>
+
+                        <div class="example-card">
+                            <h3>Elite (1984)</h3>
+                            <p><strong>Plataforma:</strong> BBC Micro (2 MHz)</p>
+                            <p><strong>Memoria:</strong> 32KB</p>
+                            <p><strong>Innovación:</strong> Universo 3D con 2048 sistemas solares generados proceduralmente usando solo 22KB de código.</p>
+                            <div class="tech-detail">
+                                <strong>Magia:</strong> Generación procedimental con semillas matemáticas - cada sistema solar se generaba en tiempo real usando algoritmos deterministas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Historia de la Programación Tradicional. Una mirada al pasado que construyó nuestro presente digital.</p>
+        </div>
+    </footer>
+</body>
+</html>
