@@ -96,11 +96,13 @@ body {
 #tab2:checked ~ .tab-labels .tab-label:nth-child(2),
 #tab3:checked ~ .tab-labels .tab-label:nth-child(3),
 #tab4:checked ~ .tab-labels .tab-label:nth-child(4),
-#tab5:checked ~ .tab-labels .tab-label:nth-child(5) {
+#tab5:checked ~ .tab-labels .tab-label:nth-child(5),
+#tab6:checked ~ .tab-labels .tab-label:nth-child(6) {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
+
 
 /* Tab Content */
 .tab-contents {
@@ -116,14 +118,15 @@ body {
     backdrop-filter: blur(20px);
     animation: fadeIn 0.5s ease-in-out;
 }
-
 #tab1:checked ~ .tab-contents .tab-content:nth-child(1),
 #tab2:checked ~ .tab-contents .tab-content:nth-child(2),
 #tab3:checked ~ .tab-contents .tab-content:nth-child(3),
 #tab4:checked ~ .tab-contents .tab-content:nth-child(4),
-#tab5:checked ~ .tab-contents .tab-content:nth-child(5) {
+#tab5:checked ~ .tab-contents .tab-content:nth-child(5),
+#tab6:checked ~ .tab-contents .tab-content:nth-child(6) {
     display: block;
 }
+
 
 @keyframes fadeIn {
     from {
@@ -388,7 +391,19 @@ code {
         gap: 0.5rem;
         text-align: center;
     }
+    /* Ajustes extra para que los lenguajes se vean bien en celulares */
+.language-card {
+    font-size: 14px;
+    padding: 1.2rem;
 }
+
+.code-sample pre {
+    font-size: 12px;  /* texto del código más pequeño */
+    overflow-x: auto; /* scroll horizontal si se corta */
+}
+
+}
+
 
 @media (max-width: 480px) {
     .container {
@@ -419,4 +434,14 @@ code {
         padding: 1rem;
         font-size: 0.8rem;
     }
+    .hero-video {
+    width: 100%;       /* ocupa todo el ancho disponible */
+    max-width: 600px;  /* límite para que no sea gigante en pantallas grandes */
+    height: auto;      /* mantiene la proporción */
+    border-radius: 12px; /* opcional, esquinas redondeadas */
+    display: block;    /* quita espacios raros */
+    margin: 0 auto;    /* centra el video */
+}
+
+    
 }
